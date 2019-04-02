@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Album } from '../album.model';
+import { albumData } from '../album-data';
 
 @Component({
   selector: 'app-marketplace',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./marketplace.component.scss']
 })
 export class MarketplaceComponent implements OnInit {
-
+  albums: Album[] = albumData;
   constructor() { }
 
   ngOnInit() {
+    console.log("albums: ", this.albums);
   }
 
 }
