@@ -1,5 +1,5 @@
 
-export const albumData = [
+export const albumData: Album[] = [
   {
     title: "Pulse",
     artist: "Pink Floyd",

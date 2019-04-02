@@ -2,7 +2,6 @@
 
 <p>All our fine products will be listed here shortly!</p>
 
-<div *ngFor="let album of albums">
-  <p>{{album.title}}</p>
-  <p>{{album.description}}</p>
+<div *ngFor="let album of albums" class="panel panel-default" (click)="goToDetailPage(album)">
+  <h3><em>{{album.title}}</em> by {{album.artist}}</h3>
 </div>
