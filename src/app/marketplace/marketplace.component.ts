@@ -1,22 +1,27 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Album } from '../album.model';
-import { albumData } from '../album-data';
 import { Router } from '@angular/router';
+import { AlbumService } from '../album.service';
 
 @Component({
   selector: 'app-marketplace',
   templateUrl: './marketplace.component.html',
-  styleUrls: ['./marketplace.component.scss']
+  styleUrls: ['./marketplace.component.scss'],
+  providers: [AlbumService]
 })
-export class MarketplaceComponent implements OnInit {
-  albums: Album[] = albumData;
-  constructor(private router: Router) { }
 
-  ngOnInit() {
-    console.log("albums: ", this.albums);
+export class MarketplaceComponent implements OnInit {
+  albums: Album[];
+
+  constructor(private router: Router, private albumService: AlbumService){}
+
+  ngOnInit(){
+    this.albums = this.albumService.getAlbums();
+    console.log(this.albums );
   }
 
   goToDetailPage(clickedAlbum: Album) {
     this.router.navigate(['albums', clickedAlbum.id]);
-  }
+  };
 }
