@@ -1,4 +1,36 @@
 
+
+.panel:hover {
+  background-color: #F5F2F1;
+  cursor: pointer;
+}
+
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: left;
+
+}
+
 .panel {
-  margin-bottom: 75px;
+  width: 400px;
+  margin: 2%;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+h3 {
+  font-weight: 200;
+
+}
+
+@media only screen and (max-width: 950px) {
+  .container {
+    justify-content: center;
+  }
 }

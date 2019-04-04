@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -8,4 +9,7 @@
   height: 60px;
   background-color: #f5f5f5;
   padding: 15px;
+}
+* {
+  // border: red 1px solid;
 }
